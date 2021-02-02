@@ -80,6 +80,16 @@
   margin-top: 3rem;
 }
 
+.grid-balance {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 800px;
+  max-width: 800px;
+  margin-top: 3rem;
+  border: 0px solid;
+}
+
 .card {
   margin: 1rem;
   flex-basis: 45%;
@@ -111,8 +121,8 @@
 }
 
 .card-balance {
+  width: 50%;
   margin: 1rem;
-  flex-basis: 45%;
   padding: 1.5rem;
   text-align: left;
   color: inherit;
@@ -120,13 +130,15 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
+  background-color: #444;
+  color: #fff;
 }
 
 .card-balance:hover,
 .card-balance:focus,
 .card-balance:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #a29e27;
+  border-color: #a29e27;
 }
 
 .card-balance h3 {

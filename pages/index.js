@@ -43,7 +43,7 @@ export default function Home() {
           <code className={styles.code}>pages/index.js</code>
         </p>
 
-        <div className={styles.grid}>
+        <div className={styles['grid-balance']}>
           <a href={'javascript:'} className={styles['card-balance']}>
             <h3>Saldo Disponível</h3>
             <p>R$ 1.000.000,00</p>
