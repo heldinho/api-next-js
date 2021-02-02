@@ -45,6 +45,17 @@ export default function Home() {
 
         <div className={styles.grid}>
           <a href={'javascript:'} className={styles.card}>
+            <h3>Saldo Disponível</h3>
+            <p>R$ 1.000.000,00</p>
+          </a>
+          <a href={'javascript:'} className={styles.card}>
+            <h3>Saldo a Liberar</h3>
+            <p>R$ 50.000,00</p>
+          </a>
+        </div>
+
+        <div className={styles.grid}>
+          <a href={'javascript:'} className={styles.card}>
             <h3>Pagamentos &rarr;</h3>
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
