@@ -44,11 +44,11 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <a href={'javascript:'} className={styles.card}>
+          <a href={'javascript:'} className={styles['card-balance']}>
             <h3>Saldo Disponível</h3>
             <p>R$ 1.000.000,00</p>
           </a>
-          <a href={'javascript:'} className={styles.card}>
+          <a href={'javascript:'} className={styles['card-balance']}>
             <h3>Saldo a Liberar</h3>
             <p>R$ 50.000,00</p>
           </a>
