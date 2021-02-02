@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "git": "git add . && git commit -m 'fix' && git push"
   },
   "dependencies": {
     "jquery": "^3.5.1",
