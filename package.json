@@ -9,10 +9,12 @@
     "git": "git add . && git commit -m 'fix' && git push"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "jquery": "^3.5.1",
     "next": "10.0.6",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "socket.io": "^3.1.0"
+    "socket.io": "^3.1.0",
+    "socket.io-client": "^3.1.0"
   }
 }
