@@ -9,8 +9,11 @@
     "git": "git add . && git commit -m 'fix' && git push"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv-safe": "^8.2.0",
     "express": "^4.17.1",
     "jquery": "^3.5.1",
+    "jsonwebtoken": "^8.5.1",
     "next": "10.0.6",
     "react": "17.0.1",
     "react-dom": "17.0.1",

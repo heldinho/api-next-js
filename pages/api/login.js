@@ -3,7 +3,6 @@ const jwt = require('jsonwebtoken')
 
 export default (req, res) => {
   // res.status(200).json({
-  //   message: 'Teste de api com next.js',
   //   headers: { ...req.headers },
   //   query: { ...req.query },
   //   body: { ...req.body }
@@ -15,7 +14,6 @@ export default (req, res) => {
     const token = jwt.sign({ id }, secret, {
       expiresIn: 300 /// expires in 5 min
     })
-    console.log(secret)
     return res.status(200).json({ auth: true, token: token })
   }
 
