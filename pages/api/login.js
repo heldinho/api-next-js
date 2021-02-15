@@ -8,11 +8,14 @@ export default async (req, res) => {
   //   body: { ...req.body }
   // })
 
-  if (req.body.user === 'helder' && req.body.password === '123') {
+  if (
+    req.body.email === 'helder@hfpsis.com.br' &&
+    req.body.password === '123'
+  ) {
     const secret = process.env.SECRET
     const id = 1
     const token = jwt.sign({ id }, secret, {
-      expiresIn: 300 /// expires in 5 min
+      expiresIn: 60 /// expires in 1 min
     })
     return res.status(200).json({ auth: true, token: token })
   }

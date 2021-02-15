@@ -1,5 +1,6 @@
 require('dotenv-safe').config()
 const jwt = require('jsonwebtoken')
+const clients = require('../database/clients.json')
 
 export function verifyJWT(req, res) {
   const secret = process.env.SECRET
@@ -14,6 +15,8 @@ export function verifyJWT(req, res) {
         .status(500)
         .json({ auth: false, message: 'Failed to authenticate token', err })
 
-    return res.status(200).json({ auth: true, ...decoded })
+    const clientId = decoded.id
+    const client = clients.filter(cli => cli.id === clientId)
+    return res.status(200).json({ auth: true, ...client[0] })
   })
 }
