@@ -1,5 +1,7 @@
 require('dotenv-safe').config()
 const jwt = require('jsonwebtoken')
+const cors = require('cors')
+cors()
 
 export default async (req, res) => {
   // res.status(200).json({

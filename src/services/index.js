@@ -1,6 +1,8 @@
 require('dotenv-safe').config()
 const jwt = require('jsonwebtoken')
 const clients = require('../database/clients.json')
+const cors = require('cors')
+cors()
 
 export function verifyJWT(req, res) {
   const secret = process.env.SECRET
