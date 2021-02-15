@@ -1,7 +1,7 @@
 require('dotenv-safe').config()
 const jwt = require('jsonwebtoken')
 
-export default (req, res) => {
+export default async (req, res) => {
   // res.status(200).json({
   //   headers: { ...req.headers },
   //   query: { ...req.query },
