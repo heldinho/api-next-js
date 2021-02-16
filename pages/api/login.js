@@ -15,8 +15,8 @@ export default async (req, res) => {
   })
 
   if (
-    req.body.email === 'helder@hfpsis.com.br' &&
-    req.body.password === '123'
+    req.body.email === 'helder.passos@mlins.com.br' &&
+    req.body.password === 'admin123'
   ) {
     const secret = process.env.SECRET
     const id = 1
