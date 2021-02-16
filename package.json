@@ -16,6 +16,7 @@
     "jquery": "^3.5.1",
     "jsonwebtoken": "^8.5.1",
     "next": "10.0.6",
+    "nextjs-cors": "^1.0.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "socket.io": "^3.1.0",

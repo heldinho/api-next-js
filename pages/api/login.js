@@ -1,7 +1,6 @@
 require('dotenv-safe').config()
 const jwt = require('jsonwebtoken')
-const cors = require('cors')
-cors()
+const NextCors = require('nextjs-cors')
 
 export default async (req, res) => {
   // res.status(200).json({
@@ -9,6 +8,11 @@ export default async (req, res) => {
   //   query: { ...req.query },
   //   body: { ...req.body }
   // })
+  await NextCors(req, res, {
+    methods: ['POST'],
+    origin: '*',
+    optionsSuccessStatus: 200
+  })
 
   if (
     req.body.email === 'helder@hfpsis.com.br' &&
