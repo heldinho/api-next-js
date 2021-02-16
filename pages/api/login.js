@@ -7,17 +7,32 @@ const cors = Cors({
   methods: ['GET', 'POST', 'HEAD']
 })
 
+function runMiddleware(req, res, fn) {
+  return new Promise((resolve, reject) => {
+    fn(req, res, result => {
+      if (result instanceof Error) {
+        return reject(result)
+      }
+
+      return resolve(result)
+    })
+  })
+}
+
 export default async (req, res) => {
   // res.status(200).json({
   //   headers: { ...req.headers },
   //   query: { ...req.query },
   //   body: { ...req.body }
   // })
-  await NextCors(req, res, {
-    methods: ['POST', 'GET'],
-    origin: '*',
-    optionsSuccessStatus: 200
-  })
+
+  await runMiddleware(req, res, cors)
+
+  // await NextCors(req, res, {
+  //   methods: ['POST', 'GET'],
+  //   origin: '*',
+  //   optionsSuccessStatus: 200
+  // })
 
   if (
     req.body.email === 'helder.passos@mlins.com.br' &&
