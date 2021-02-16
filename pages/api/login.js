@@ -1,6 +1,5 @@
 require('dotenv-safe').config()
 const jwt = require('jsonwebtoken')
-const NextCors = require('nextjs-cors')
 import Cors from 'cors'
 
 const cors = Cors({
@@ -27,12 +26,6 @@ export default async (req, res) => {
   // })
 
   await runMiddleware(req, res, cors)
-
-  // await NextCors(req, res, {
-  //   methods: ['POST', 'GET'],
-  //   origin: '*',
-  //   optionsSuccessStatus: 200
-  // })
 
   if (
     req.body.email === 'helder.passos@mlins.com.br' &&
