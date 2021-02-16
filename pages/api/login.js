@@ -9,8 +9,8 @@ export default async (req, res) => {
   //   body: { ...req.body }
   // })
   await NextCors(req, res, {
-    methods: ['POST'],
-    origin: '*',
+    methods: ['POST', 'GET'],
+    origin: 'https://vue3-sama.now.sh/',
     optionsSuccessStatus: 200
   })
 
