@@ -1,6 +1,11 @@
 require('dotenv-safe').config()
 const jwt = require('jsonwebtoken')
 const NextCors = require('nextjs-cors')
+import Cors from 'cors'
+
+const cors = Cors({
+  methods: ['GET', 'POST', 'HEAD']
+})
 
 export default async (req, res) => {
   // res.status(200).json({
@@ -10,7 +15,7 @@ export default async (req, res) => {
   // })
   await NextCors(req, res, {
     methods: ['POST', 'GET'],
-    origin: 'https://vue3-sama.now.sh/',
+    origin: '*',
     optionsSuccessStatus: 200
   })
 
